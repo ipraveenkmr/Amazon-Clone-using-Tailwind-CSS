@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bg-amazon-blue {
+      background-color: #232F3E;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-r from-blue-300 to-green-300 h-64 w-full font-sans">
+
+  <!-- Header -->
+  <nav class="bg-amazon-blue p-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="text-white text-2xl font-bold">Amazon</a>
+
+      <!-- Search Bar -->
+      <div class="relative flex items-center flex-grow mx-4">
+        <input type="text" placeholder="Search" class="w-full p-2 rounded-l-md">
+        <button class="hover:bg-yellow-500 bg-yellow-400 text-white p-2 rounded-r-md">
+          🔍
+        </button>
+      </div>
+
+      <!-- Links and Menu -->
+      <div class="flex items-center space-x-6 text-white">
+        <a href="#" class="hover:underline">Hello, Sign in</a>
+        <a href="#" class="hover:underline">Returns & Orders</a>
+        <a href="#" class="hover:underline">Cart</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content (Product Listing) -->
+  <main class="p-8">
+    <h2 class="text-4xl font-semibold text-gray-800 mb-6 text-center py-10">Shop Amazon Devices with Alexa</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Product 1 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <h3 class="text-xl font-semibold p-2">Shop Amazon exclusive toys</h3>
+        <img src="img/1.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-blue-500 text-sm">See more toys and games</p>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+
+        <h3 class="text-xl font-semibold p-2">Shop 450+ gift card brands</h3>
+        <img src="img/2.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-blue-500 text-sm">See all gift cards</p>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <h3 class="text-xl font-semibold p-2">Customers' most-loved</h3>
+        <img src="img/3.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-blue-500 text-sm">Discover item with 4+ stars</p>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <h3 class="text-xl font-semibold p-2">Shop Amazon exclusive toys</h3>
+        <img src="img/4.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-blue-500 text-sm">See more toys and games</p>
+        </div>
+      </div>
+
+
+      <!-- Product 5 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <h3 class="text-xl font-semibold p-2">Save on pre-owned Amazon</h3>
+        <img src="img/5.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-blue-500 text-sm">See all pre-owned devices</p>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <h3 class="text-xl font-semibold p-2">Live plants & planters</h3>
+        <img src="img/6.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-blue-500 text-sm">Shop plants, plant care & pots</p>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <h3 class="text-xl font-semibold p-2">Easy, elevated t-shirts</h3>
+        <img src="img/7.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-blue-500 text-sm">See the full edit from Shopbop</p>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <h3 class="text-xl font-semibold p-2">Small space solutions</h3>
+        <img src="img/8.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <p class="text-blue-500 text-sm">Shop small space furniture & décor</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-amazon-blue text-white py-10 md:px-64 px-10">
+    <div class="container mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10">
+      <!-- Column 1 -->
+      <div>
+        <h3 class="font-semibold mb-4">Get to Know Us</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">About Us</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Careers</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Press Releases</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Amazon Cares</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Gift a Smile</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div>
+        <h3 class="font-semibold mb-4">Connect with Us</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Facebook</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Twitter</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Instagram</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">YouTube</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div>
+        <h3 class="font-semibold mb-4">Make Money with Us</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Sell on Amazon</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Amazon Global Selling</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Become an Affiliate</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Advertise Your Products</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Self-Publish with Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div>
+        <h3 class="font-semibold mb-4">Let Us Help You</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">COVID-19 and Amazon</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Your Account</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Your Orders</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Shipping Rates & Policies</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Return & Replacements</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 5 -->
+      <div>
+        <h3 class="font-semibold mb-4">Payment Products</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Amazon Business</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Shop with Points</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Reload Your Balance</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline text-sm">Amazon Currency Converter</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center text-sm mt-10 text-gray-400">
+      <p>&copy; 2025 Amazon.com, Inc. or its affiliates</p>
+      <div class="mt-4">
+        <a href="#" class="text-gray-300 hover:underline text-sm mx-2">Privacy Notice</a>
+        <a href="#" class="text-gray-300 hover:underline text-sm mx-2">Conditions of Use</a>
+        <a href="#" class="text-gray-300 hover:underline text-sm mx-2">Help</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

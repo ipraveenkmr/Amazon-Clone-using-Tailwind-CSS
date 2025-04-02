@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Clone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bg-amazon-blue {
+      background-color: #131921;
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+
+  <!-- Header -->
+  <nav class="bg-amazon-blue p-4">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="text-white text-2xl font-bold">Amazon</a>
+
+      <!-- Search Bar -->
+      <div class="relative flex items-center flex-grow mx-4">
+        <input type="text" placeholder="Search" class="w-full p-2 rounded-l-md">
+        <button class="hover:bg-yellow-500 bg-yellow-400 text-white p-2 rounded-r-md">
+          🔍
+        </button>
+      </div>
+
+      <!-- Links and Menu -->
+      <div class="flex items-center space-x-6 text-white">
+        <a href="#" class="hover:underline">Hello, Sign in</a>
+        <a href="#" class="hover:underline">Returns & Orders</a>
+        <a href="#" class="hover:underline">Cart</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content (Product Listing) -->
+  <main class="p-8">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-6">Featured Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Product 1 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <img src="img/1.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Product 1</h3>
+          <p class="text-gray-600">$99.99</p>
+          <button class="hover:bg-yellow-500 bg-yellow-400 text-black py-2 px-4 w-full rounded-full mt-4">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <img src="img/2.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Product 2</h3>
+          <p class="text-gray-600">$149.99</p>
+          <button class="hover:bg-yellow-500 bg-yellow-400 text-black py-2 px-4 w-full rounded-full mt-4">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <img src="img/3.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Product 3</h3>
+          <p class="text-gray-600">$249.99</p>
+          <button class="hover:bg-yellow-500 bg-yellow-400 text-black py-2 px-4 w-full rounded-full mt-4">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <img src="img/4.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Product 4</h3>
+          <p class="text-gray-600">$49.99</p>
+          <button class="hover:bg-yellow-500 bg-yellow-400 text-black py-2 px-4 w-full rounded-full mt-4">Add to Cart</button>
+        </div>
+      </div>
+
+
+      <!-- Product 5 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <img src="img/5.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Product 4</h3>
+          <p class="text-gray-600">$49.99</p>
+          <button class="hover:bg-yellow-500 bg-yellow-400 text-black py-2 px-4 w-full rounded-full mt-4">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <img src="img/6.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Product 4</h3>
+          <p class="text-gray-600">$49.99</p>
+          <button class="hover:bg-yellow-500 bg-yellow-400 text-black py-2 px-4 w-full rounded-full mt-4">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <img src="img/7.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Product 4</h3>
+          <p class="text-gray-600">$49.99</p>
+          <button class="hover:bg-yellow-500 bg-yellow-400 text-black py-2 px-4 w-full rounded-full mt-4">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+        <img src="img/8.jpg" alt="Product" class="w-full h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold">Product 4</h3>
+          <p class="text-gray-600">$49.99</p>
+          <button class="hover:bg-yellow-500 bg-yellow-400 text-black py-2 px-4 w-full rounded-full mt-4">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-10 md:px-32 px-10">
+    <div class="container mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10">
+      <!-- Column 1 -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Get to Know Us</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:underline">About Us</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Careers</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Press Releases</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Amazon Cares</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Gift a Smile</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Connect with Us</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:underline">Facebook</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Twitter</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Instagram</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">YouTube</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Make Money with Us</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:underline">Sell on Amazon</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Amazon Global Selling</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Become an Affiliate</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Advertise Your Products</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Self-Publish with Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Let Us Help You</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:underline">COVID-19 and Amazon</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Your Account</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Your Orders</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Shipping Rates & Policies</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Return & Replacements</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 5 -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Amazon Payment Products</h3>
+        <ul>
+          <li><a href="#" class="text-gray-300 hover:underline">Amazon Business</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Shop with Points</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Reload Your Balance</a></li>
+          <li><a href="#" class="text-gray-300 hover:underline">Amazon Currency Converter</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center text-sm mt-10 text-gray-400">
+      <p>&copy; 2025 Amazon.com, Inc. or its affiliates</p>
+      <div class="mt-4">
+        <a href="#" class="text-gray-300 hover:underline mx-2">Privacy Notice</a>
+        <a href="#" class="text-gray-300 hover:underline mx-2">Conditions of Use</a>
+        <a href="#" class="text-gray-300 hover:underline mx-2">Help</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
