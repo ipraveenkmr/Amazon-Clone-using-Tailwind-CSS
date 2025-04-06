@@ -100,7 +100,7 @@
   <!-- Nav Main -->
   <nav class="bg-slate-900 min-h-[70px] p-2 px-4">
     <div class="flex pt-14 text-white gap-6">
-      <div id="openSidebar" class="flex cursor-pointer text-sm">
+      <div class="flex cursor-pointer text-sm">
         <span class="mr-2">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="size-6">
@@ -109,48 +109,23 @@
         </span>
         All
       </div>
-      <div class="cursor-pointer text-sm">Today's Deal</div>
-      <div class="cursor-pointer text-sm">Registry</div>
-      <div class="cursor-pointer text-sm">Customer Service</div>
-      <div class="cursor-pointer text-sm">Gift Card</div>
-      <div class="cursor-pointer text-sm">Sell</div>
+      <div class="cursor-pointer text-sm">
+        Today's Deal
+      </div>
+      <div class="cursor-pointer text-sm">
+        Registry
+      </div>
+      <div class="cursor-pointer text-sm">
+        Customer Service
+      </div>
+      <div class="cursor-pointer text-sm">
+        Gift Card
+      </div>
+      <div class="cursor-pointer text-sm">
+        Sell
+      </div>
     </div>
   </nav>
-  <!-- Sidebar -->
-  <div id="sidebar"
-    class="fixed top-0 left-0 h-full w-[23vw] bg-white text-black shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
-    <div class="p-4 border-b flex justify-between items-center bg-amazon-blue">
-      <div class="flex gap-2">
-        <div class="text-3xl text-white mt-1">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-          </svg>
-        </div>
-        <h2 class="font-bold text-lg text-white">
-          Hello, sign in
-        </h2>
-      </div>
-      <button id="closeSidebar" class="text-3xl font-bold text-white">&times;</button>
-    </div>
-    <h3 class="font-bold m-2 p-2">Shop by department</h3>
-    <ul class="px-4 pt-2 space-y-3">
-      <li class="hover:bg-slate-200 p-2 cursor-pointer">Electronics</li>
-      <li class="hover:bg-slate-200 p-2 cursor-pointer">Computer</li>
-      <li class="hover:bg-slate-200 p-2 cursor-pointer">Books</li>
-      <li class="hover:bg-slate-200 p-2 cursor-pointer">Toys & Games</li>
-      <li class="hover:bg-slate-200 p-2 cursor-pointer">Beauty & Personal Care</li>
-      <li class="hover:bg-slate-200 p-2 cursor-pointer">Home & Kitchen</li>
-      <li class="hover:bg-slate-200 p-2 cursor-pointer">Sports & Outdoors</li>
-      <li class="hover:bg-slate-200 p-2 cursor-pointer">Grocery</li>
-      <li class="hover:bg-slate-200 p-2 cursor-pointer">Health & Household</li>
-      <li class="hover:bg-slate-200 p-2 cursor-pointer">Pet Supplies</li>
-    </ul>
-  </div>
-
-  <!-- Overlay (optional) -->
-  <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden z-40"></div>
 
   <!-- Main Content (Product Listing) -->
   <main class="p-8">
@@ -304,29 +279,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- JS Logic -->
-  <script>
-    const sidebar = document.getElementById('sidebar');
-    const openBtn = document.getElementById('openSidebar');
-    const closeBtn = document.getElementById('closeSidebar');
-    const overlay = document.getElementById('overlay');
-
-    openBtn.addEventListener('click', () => {
-      sidebar.classList.remove('-translate-x-full');
-      overlay.classList.remove('hidden');
-    });
-
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.add('-translate-x-full');
-      overlay.classList.add('hidden');
-    });
-
-    overlay.addEventListener('click', () => {
-      sidebar.classList.add('-translate-x-full');
-      overlay.classList.add('hidden');
-    });
-  </script>
 
 </body>
 

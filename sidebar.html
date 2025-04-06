@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="relative">
+
+  <!-- Navbar -->
+  <nav class="bg-slate-900 min-h-[70px] p-2 px-4">
+    <div class="flex pt-14 text-white gap-6">
+      <div id="openSidebar" class="flex cursor-pointer text-sm">
+        <span class="mr-2">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </span>
+        All
+      </div>
+      <div class="cursor-pointer text-sm">Today's Deal</div>
+      <div class="cursor-pointer text-sm">Registry</div>
+      <div class="cursor-pointer text-sm">Customer Service</div>
+      <div class="cursor-pointer text-sm">Gift Card</div>
+      <div class="cursor-pointer text-sm">Sell</div>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div id="sidebar"
+       class="fixed top-0 left-0 h-full w-64 bg-white text-black shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+    <div class="p-4 border-b flex justify-between items-center">
+      <h2 class="font-bold text-lg">Menu</h2>
+      <button id="closeSidebar" class="text-xl font-bold">&times;</button>
+    </div>
+    <ul class="p-4 space-y-3">
+      <li class="hover:underline cursor-pointer">Home</li>
+      <li class="hover:underline cursor-pointer">Shop</li>
+      <li class="hover:underline cursor-pointer">Categories</li>
+      <li class="hover:underline cursor-pointer">Orders</li>
+      <li class="hover:underline cursor-pointer">Profile</li>
+    </ul>
+  </div>
+
+  <!-- Overlay (optional) -->
+  <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden z-40"></div>
+
+  <!-- JS Logic -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const openBtn = document.getElementById('openSidebar');
+    const closeBtn = document.getElementById('closeSidebar');
+    const overlay = document.getElementById('overlay');
+
+    openBtn.addEventListener('click', () => {
+      sidebar.classList.remove('-translate-x-full');
+      overlay.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+  </script>
+
+</body>
+</html>
