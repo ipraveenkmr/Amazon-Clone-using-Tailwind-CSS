@@ -19,7 +19,7 @@
   <nav class="bg-amazon-blue p-2 px-4 fixed min-w-[99vw]">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <a href="/" class="text-white text-2xl font-bold">Amazon</a>
+      <a href="/home.html" class="text-white text-2xl font-bold">Amazon</a>
       <div class="flex ml-2 hover:border border-white cursor-pointer p-1">
         <div class="text-white mt-2">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -146,9 +146,9 @@
       </div>
       <div class="cursor-pointer text-sm">Today's Deal</div>
       <div class="cursor-pointer text-sm">Registry</div>
-      <div class="cursor-pointer text-sm">Customer Service</div>
-      <div class="cursor-pointer text-sm">Gift Card</div>
-      <div class="cursor-pointer text-sm">Sell</div>
+      <div class="cursor-pointer text-sm hidden md:block">Customer Service</div>
+      <div class="cursor-pointer text-sm hidden md:block">Gift Card</div>
+      <div class="cursor-pointer text-sm hidden md:block">Sell</div>
     </div>
   </nav>
   <!-- Sidebar -->
@@ -188,201 +188,315 @@
   <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden z-40"></div>
 
   <!-- Main Content (Product Listing) -->
-  <!-- Product Grid -->
-  <main class="p-6">
-    <h2 class="text-2xl font-semibold mb-4">Top Electronics</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+  <div class="md:flex">
 
-      <!-- Product Card -->
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p1.webp" alt="Smartwatch" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >iPhone 14 Pro</h3>
-        <p class="text-sm text-gray-600 mb-2">128GB, Space Black</p>
-        <p class="font-semibold text-lg mb-1">$999</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
+    <!-- Checkbox Filter -->
+    <div class="max-w-[15vw] min-w-[15vw] bg-white p-4 rounded text-sm text-gray-800 space-y-6 hidden md:block mt-4">
+      <!-- Department -->
+      <div>
+        <h2 class="font-semibold mb-2">Department</h2>
+        <div class="space-y-1">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="accent-yellow-500">
+            <span>Computers</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="accent-yellow-500">
+            <span>Computer Accessories</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="accent-yellow-500">
+            <span>Electronics</span>
+          </label>
+        </div>
       </div>
 
-      <!-- Laptop -->
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p2.webp" alt="Smartwatch" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >HP Pavilion Laptop</h3>
-        <p class="text-sm text-gray-600 mb-2">16GB RAM, 512GB SSD</p>
-        <p class="font-semibold text-xl mb-1">$749</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
+      <!-- Brands -->
+      <div>
+        <h2 class="font-semibold mb-2">Brands</h2>
+        <div class="space-y-1 overflow-y-auto pr-2">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="accent-yellow-500">
+            <span>Logitech</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="accent-yellow-500">
+            <span>Amazon Basics</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="accent-yellow-500">
+            <span>Anker</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="accent-yellow-500">
+            <span>SanDisk</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="accent-yellow-500">
+            <span>APC</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="accent-yellow-500">
+            <span>acer</span>
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" class="accent-yellow-500">
+            <span>SAMSUNG</span>
+          </label>
+        </div>
+        <a href="#" class="text-blue-600 text-xs mt-1 inline-block hover:underline">See more</a>
       </div>
 
-      <!-- Headphones -->
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p3.webp" alt="Smartwatch" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >Logitech G435 Headset</h3>
-        <p class="text-sm text-gray-600 mb-2">Wireless, Noise Canceling</p>
-        <p class="font-semibold text-xl mb-1">$59</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
+      <!-- Top Brands -->
+      <div>
+        <h2 class="font-semibold mb-2">Top Brands in Electronics</h2>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" class="accent-yellow-500">
+          <span>Top Brands</span>
+        </label>
       </div>
 
-      <!-- Smartwatch -->
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p4.webp" alt="Smartwatch" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >Samsung Galaxy Watch</h3>
-        <p class="text-sm text-gray-600 mb-2">Bluetooth, 44mm</p>
-        <p class="font-semibold text-xl mb-1">$99</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
+      <!-- Deals -->
+      <div>
+        <h2 class="font-semibold mb-2">Deals & Discounts</h2>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" class="accent-yellow-500">
+          <span>All Discounts</span>
+        </label>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" class="accent-yellow-500">
+          <span>Today's Deals</span>
+        </label>
       </div>
 
-      <!-- Smartwatch -->
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p5.webp" alt="Smartwatch" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >Samsung Galaxy Watch</h3>
-        <p class="text-sm text-gray-600 mb-2">Bluetooth, 44mm</p>
-        <p class="font-semibold text-xl mb-1">$199</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
+      <!-- Premium -->
+      <div>
+        <h2 class="font-semibold mb-2">Premium Electronics</h2>
+        <label class="flex items-center gap-2">
+          <input type="checkbox" class="accent-yellow-500">
+          <span>Premium Brands</span>
+        </label>
       </div>
-
-
-      <!-- Updated 15 Products -->
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p6.webp" alt="Product Image" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >AULA F99 Pro Wireless Keyboard</h3>
-        <p class="text-sm text-gray-600 mb-2">Tri-Mode BT5.0/USB-C/2.4GHz</p>
-        <p class="font-semibold text-xl mb-1">$79</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p7.webp" alt="Product Image" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >Dynamode 12U Rack Cabinet</h3>
-        <p class="text-sm text-gray-600 mb-2">19" Wall Mount, Flat Pack</p>
-        <p class="font-semibold text-xl mb-1">$129</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p8.webp" alt="Product Image" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >Dockteck 5-in-1 USB C Hub</h3>
-        <p class="text-sm text-gray-600 mb-2">Dual HDMI, 100W PD</p>
-        <p class="font-semibold text-xl mb-1">$49</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p9.webp" alt="Product Image" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >HP 67 Ink Cartridges (2 Pack)</h3>
-        <p class="text-sm text-gray-600 mb-2">For HP DeskJet & ENVY Series</p>
-        <p class="font-semibold text-xl mb-1">$34</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p10.webp" alt="Product Image" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >Amazon Basics 128GB SD Card</h3>
-        <p class="text-sm text-gray-600 mb-2">U3, A2, up to 100 MB/s</p>
-        <p class="font-semibold text-xl mb-1">$15</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p11.webp" alt="Product Image" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >Logitech H390 Wired Headset</h3>
-        <p class="text-sm text-gray-600 mb-2">USB-A, Noise Cancelling</p>
-        <p class="font-semibold text-xl mb-1">$39</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p12.webp" alt="Product Image" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >VEMONT Powered USB Hub</h3>
-        <p class="text-sm text-gray-600 mb-2">7 Ports + 1 Charging Port</p>
-        <p class="font-semibold text-xl mb-1">$22</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p13.webp" alt="Product Image" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >5 in 1 USB C Hub</h3>
-        <p class="text-sm text-gray-600 mb-2">4K@60Hz HDMI, 140W PD</p>
-        <p class="font-semibold text-xl mb-1">$59</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p14.webp" alt="Product Image" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >QGeeM USB C Hub Ethernet</h3>
-        <p class="text-sm text-gray-600 mb-2">9 in 1, 100W PD</p>
-        <p class="font-semibold text-xl mb-1">$45</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p15.webp" alt="Product Image" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >WOLFBOX MF100 Air Duster</h3>
-        <p class="text-sm text-gray-600 mb-2">150000RPM Rechargeable</p>
-        <p class="font-semibold text-xl mb-1">$89</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <!-- Extra 5 Products -->
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p16.webp" alt="Extra Product" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >Baseus GaN Charger 100W</h3>
-        <p class="text-sm text-gray-600 mb-2">4 Ports Fast Charging</p>
-        <p class="font-semibold text-xl mb-1">$69</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p17.webp" alt="Extra Product" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >Anker Power Bank 20000mAh</h3>
-        <p class="text-sm text-gray-600 mb-2">Fast Charging, USB-C</p>
-        <p class="font-semibold text-xl mb-1">$55</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p18.webp" alt="Extra Product" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >SanDisk 1TB SSD Portable</h3>
-        <p class="text-sm text-gray-600 mb-2">USB 3.2, High-Speed</p>
-        <p class="font-semibold text-xl mb-1">$109</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p19.webp" alt="Extra Product" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >TP-Link AX3000 WiFi 6 Router</h3>
-        <p class="text-sm text-gray-600 mb-2">Dual Band Gigabit</p>
-        <p class="font-semibold text-xl mb-1">$79</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
-      <div class="bg-white rounded-lg p-4">
-        <img src="img/product/p20.webp" alt="Extra Product" class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
-        <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500" >Echo Dot (5th Gen)</h3>
-        <p class="text-sm text-gray-600 mb-2">Smart Speaker with Alexa</p>
-        <p class="font-semibold text-xl mb-1">$49</p>
-        <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
-          Cart</button>
-      </div>
-
     </div>
-  </main>
+    <!-- Product Grid -->
+    <main class="p-6">
+      <h2 class="text-2xl font-semibold mb-4">Top Electronics</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+
+        <!-- Product Card -->
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p1.webp" alt="Smartwatch"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">iPhone 14 Pro</h3>
+          <p class="text-sm text-gray-600 mb-2">128GB, Space Black</p>
+          <p class="font-semibold text-lg mb-1">$999</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <!-- Laptop -->
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p2.webp" alt="Smartwatch"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">HP Pavilion Laptop</h3>
+          <p class="text-sm text-gray-600 mb-2">16GB RAM, 512GB SSD</p>
+          <p class="font-semibold text-xl mb-1">$749</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <!-- Headphones -->
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p3.webp" alt="Smartwatch"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">Logitech G435 Headset</h3>
+          <p class="text-sm text-gray-600 mb-2">Wireless, Noise Canceling</p>
+          <p class="font-semibold text-xl mb-1">$59</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <!-- Smartwatch -->
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p4.webp" alt="Smartwatch"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">Samsung Galaxy Watch</h3>
+          <p class="text-sm text-gray-600 mb-2">Bluetooth, 44mm</p>
+          <p class="font-semibold text-xl mb-1">$99</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <!-- Smartwatch -->
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p5.webp" alt="Smartwatch"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">Samsung Galaxy Watch</h3>
+          <p class="text-sm text-gray-600 mb-2">Bluetooth, 44mm</p>
+          <p class="font-semibold text-xl mb-1">$199</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+
+        <!-- Updated 15 Products -->
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p6.webp" alt="Product Image"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">AULA F99 Pro Wireless Keyboard</h3>
+          <p class="text-sm text-gray-600 mb-2">Tri-Mode BT5.0/USB-C/2.4GHz</p>
+          <p class="font-semibold text-xl mb-1">$79</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p7.webp" alt="Product Image"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">Dynamode 12U Rack Cabinet</h3>
+          <p class="text-sm text-gray-600 mb-2">19" Wall Mount, Flat Pack</p>
+          <p class="font-semibold text-xl mb-1">$129</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p8.webp" alt="Product Image"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">Dockteck 5-in-1 USB C Hub</h3>
+          <p class="text-sm text-gray-600 mb-2">Dual HDMI, 100W PD</p>
+          <p class="font-semibold text-xl mb-1">$49</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p9.webp" alt="Product Image"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">HP 67 Ink Cartridges (2 Pack)</h3>
+          <p class="text-sm text-gray-600 mb-2">For HP DeskJet & ENVY Series</p>
+          <p class="font-semibold text-xl mb-1">$34</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p10.webp" alt="Product Image"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">Amazon Basics 128GB SD Card</h3>
+          <p class="text-sm text-gray-600 mb-2">U3, A2, up to 100 MB/s</p>
+          <p class="font-semibold text-xl mb-1">$15</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p11.webp" alt="Product Image"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">Logitech H390 Wired Headset</h3>
+          <p class="text-sm text-gray-600 mb-2">USB-A, Noise Cancelling</p>
+          <p class="font-semibold text-xl mb-1">$39</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p12.webp" alt="Product Image"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">VEMONT Powered USB Hub</h3>
+          <p class="text-sm text-gray-600 mb-2">7 Ports + 1 Charging Port</p>
+          <p class="font-semibold text-xl mb-1">$22</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p13.webp" alt="Product Image"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">5 in 1 USB C Hub</h3>
+          <p class="text-sm text-gray-600 mb-2">4K@60Hz HDMI, 140W PD</p>
+          <p class="font-semibold text-xl mb-1">$59</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p14.webp" alt="Product Image"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">QGeeM USB C Hub Ethernet</h3>
+          <p class="text-sm text-gray-600 mb-2">9 in 1, 100W PD</p>
+          <p class="font-semibold text-xl mb-1">$45</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p15.webp" alt="Product Image"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">WOLFBOX MF100 Air Duster</h3>
+          <p class="text-sm text-gray-600 mb-2">150000RPM Rechargeable</p>
+          <p class="font-semibold text-xl mb-1">$89</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <!-- Extra 5 Products -->
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p16.webp" alt="Extra Product"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">Baseus GaN Charger 100W</h3>
+          <p class="text-sm text-gray-600 mb-2">4 Ports Fast Charging</p>
+          <p class="font-semibold text-xl mb-1">$69</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p17.webp" alt="Extra Product"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">Anker Power Bank 20000mAh</h3>
+          <p class="text-sm text-gray-600 mb-2">Fast Charging, USB-C</p>
+          <p class="font-semibold text-xl mb-1">$55</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p18.webp" alt="Extra Product"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">SanDisk 1TB SSD Portable</h3>
+          <p class="text-sm text-gray-600 mb-2">USB 3.2, High-Speed</p>
+          <p class="font-semibold text-xl mb-1">$109</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p19.webp" alt="Extra Product"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">TP-Link AX3000 WiFi 6 Router</h3>
+          <p class="text-sm text-gray-600 mb-2">Dual Band Gigabit</p>
+          <p class="font-semibold text-xl mb-1">$79</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+        <div class="bg-white rounded-lg p-4">
+          <img src="img/product/p20.webp" alt="Extra Product"
+            class="w-full h-40 object-contain mb-3 bg-slate-100 cursor-pointer">
+          <h3 class="font-semibold text-lg cursor-pointer hover:text-yellow-500">Echo Dot (5th Gen)</h3>
+          <p class="text-sm text-gray-600 mb-2">Smart Speaker with Alexa</p>
+          <p class="font-semibold text-xl mb-1">$49</p>
+          <button class="bg-yellow-400 hover:bg-yellow-300 text-sm font-semibold px-4 py-2 rounded-full">Add to
+            Cart</button>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+
 
 
 

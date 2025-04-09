@@ -19,7 +19,7 @@
   <nav class="bg-amazon-blue p-2 px-4 fixed min-w-[99vw]">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <a href="/" class="text-white text-2xl font-bold">Amazon</a>
+      <a href="/home.html" class="text-white text-2xl font-bold">Amazon</a>
       <div class="flex ml-2 hover:border border-white cursor-pointer p-1">
         <div class="text-white mt-2">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -71,7 +71,8 @@
           </div>
 
           <!-- Dropdown Menu -->
-          <div id="dropdownMenu" class="absolute mt-2 w-96 bg-white text-black rounded-md shadow-lg z-50 hidden p-4 -ml-32">
+          <div id="dropdownMenu"
+            class="absolute mt-2 w-96 bg-white text-black rounded-md shadow-lg z-50 hidden p-4 -ml-32">
             <div class="grid grid-cols-2 text-sm">
 
               <!-- Left Column -->
@@ -145,9 +146,9 @@
       </div>
       <div class="cursor-pointer text-sm">Today's Deal</div>
       <div class="cursor-pointer text-sm">Registry</div>
-      <div class="cursor-pointer text-sm">Customer Service</div>
-      <div class="cursor-pointer text-sm">Gift Card</div>
-      <div class="cursor-pointer text-sm">Sell</div>
+      <div class="cursor-pointer text-sm hidden md:block">Customer Service</div>
+      <div class="cursor-pointer text-sm hidden md:block">Gift Card</div>
+      <div class="cursor-pointer text-sm hidden md:block">Sell</div>
     </div>
   </nav>
   <!-- Sidebar -->
@@ -187,85 +188,102 @@
   <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden z-40"></div>
 
   <!-- Main Content (Product Listing) -->
+
   <main class="p-8">
     <h2 class="text-4xl font-semibold text-gray-800 mb-6 text-center py-10">Shop CodingMSTR Devices with Alexa</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
       <!-- Product 1 -->
-      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
-        <h3 class="text-xl font-semibold p-2">Shop Amazon exclusive toys</h3>
-        <img src="img/1.jpg" alt="Product" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <p class="text-blue-500 text-sm cursor-pointer">See more toys and games</p>
+      <a href="products.html" class="block">
+        <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+          <h3 class="text-xl font-semibold p-2">Shop Amazon exclusive toys</h3>
+          <img src="img/1.jpg" alt="Product" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <p class="text-blue-500 text-sm cursor-pointer">See more toys and games</p>
+          </div>
         </div>
-      </div>
+      </a>
 
       <!-- Product 2 -->
-      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
-
-        <h3 class="text-xl font-semibold p-2">Shop 450+ gift card brands</h3>
-        <img src="img/2.jpg" alt="Product" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <p class="text-blue-500 text-sm cursor-pointer">See all gift cards</p>
+      <a href="products.html" class="block">
+        <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+          <h3 class="text-xl font-semibold p-2">Shop 450+ gift card brands</h3>
+          <img src="img/2.jpg" alt="Product" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <p class="text-blue-500 text-sm cursor-pointer">See all gift cards</p>
+          </div>
         </div>
-      </div>
+      </a>
 
       <!-- Product 3 -->
-      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
-        <h3 class="text-xl font-semibold p-2">Customers' most-loved</h3>
-        <img src="img/3.jpg" alt="Product" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <p class="text-blue-500 text-sm cursor-pointer">Discover item with 4+ stars</p>
+      <a href="products.html" class="block">
+        <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+          <h3 class="text-xl font-semibold p-2">Customers' most-loved</h3>
+          <img src="img/3.jpg" alt="Product" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <p class="text-blue-500 text-sm cursor-pointer">Discover items with 4+ stars</p>
+          </div>
         </div>
-      </div>
+      </a>
 
       <!-- Product 4 -->
-      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
-        <h3 class="text-xl font-semibold p-2">Shop Amazon exclusive toys</h3>
-        <img src="img/4.jpg" alt="Product" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <p class="text-blue-500 text-sm cursor-pointer">See more toys and games</p>
+      <a href="products.html" class="block">
+        <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+          <h3 class="text-xl font-semibold p-2">Shop Amazon exclusive toys</h3>
+          <img src="img/4.jpg" alt="Product" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <p class="text-blue-500 text-sm cursor-pointer">See more toys and games</p>
+          </div>
         </div>
-      </div>
-
+      </a>
 
       <!-- Product 5 -->
-      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
-        <h3 class="text-xl font-semibold p-2">Save on pre-owned Amazon</h3>
-        <img src="img/5.jpg" alt="Product" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <p class="text-blue-500 text-sm cursor-pointer">See all pre-owned devices</p>
+      <a href="products.html" class="block">
+        <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+          <h3 class="text-xl font-semibold p-2">Save on pre-owned Amazon</h3>
+          <img src="img/5.jpg" alt="Product" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <p class="text-blue-500 text-sm cursor-pointer">See all pre-owned devices</p>
+          </div>
         </div>
-      </div>
+      </a>
 
       <!-- Product 6 -->
-      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
-        <h3 class="text-xl font-semibold p-2">Live plants & planters</h3>
-        <img src="img/6.jpg" alt="Product" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <p class="text-blue-500 text-sm cursor-pointer">Shop plants, plant care & pots</p>
+      <a href="products.html" class="block">
+        <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+          <h3 class="text-xl font-semibold p-2">Live plants & planters</h3>
+          <img src="img/6.jpg" alt="Product" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <p class="text-blue-500 text-sm cursor-pointer">Shop plants, plant care & pots</p>
+          </div>
         </div>
-      </div>
+      </a>
 
       <!-- Product 7 -->
-      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
-        <h3 class="text-xl font-semibold p-2">Easy, elevated t-shirts</h3>
-        <img src="img/7.jpg" alt="Product" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <p class="text-blue-500 text-sm cursor-pointer">See the full edit from Shopbop</p>
+      <a href="products.html" class="block">
+        <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+          <h3 class="text-xl font-semibold p-2">Easy, elevated t-shirts</h3>
+          <img src="img/7.jpg" alt="Product" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <p class="text-blue-500 text-sm cursor-pointer">See the full edit from Shopbop</p>
+          </div>
         </div>
-      </div>
+      </a>
 
       <!-- Product 8 -->
-      <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
-        <h3 class="text-xl font-semibold p-2">Small space solutions</h3>
-        <img src="img/8.jpg" alt="Product" class="w-full h-64 object-cover">
-        <div class="p-4">
-          <p class="text-blue-500 text-sm cursor-pointer">Shop small space furniture & décor</p>
+      <a href="products.html" class="block">
+        <div class="bg-white border rounded-lg shadow-lg overflow-hidden">
+          <h3 class="text-xl font-semibold p-2">Small space solutions</h3>
+          <img src="img/8.jpg" alt="Product" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <p class="text-blue-500 text-sm cursor-pointer">Shop small space furniture & décor</p>
+          </div>
         </div>
-      </div>
+      </a>
 
     </div>
   </main>
+
 
   <!-- Footer -->
   <footer class="bg-amazon-blue text-white py-10 md:px-64 px-10">
