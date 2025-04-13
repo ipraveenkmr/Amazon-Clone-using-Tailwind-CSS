@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-amazon-blue {
+            background-color: #232F3E;
+        }
+    </style>
+</head>
+
+<body class="h-64 w-full font-sans">
+
+    <!-- Header -->
+    <nav class="bg-amazon-blue p-2 px-4 fixed min-w-[99vw]">
+        <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/home.html" class="text-white text-2xl font-bold">Amazon</a>
+            <div class="flex ml-2 hover:border border-white cursor-pointer p-1">
+                <div class="text-white mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                </div>
+                <div class="flex flex-col ml-1 hidden md:block">
+                    <div class="text-[12px] text-white">
+                        Deliver to
+                    </div>
+                    <div class="text-sm text-white font-semibold -mt-1">
+                        India
+                    </div>
+                </div>
+            </div>
+            <!-- Search Bar -->
+            <div class="relative flex items-center flex-grow mx-4">
+                <input type="text" placeholder="Search" class="w-full p-2 rounded-l-md">
+                <button class="hover:bg-yellow-500 bg-amber-300 p-2 rounded-r-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Links and Menu -->
+            <div class="flex items-center space-x-6 text-white">
+                <!-- Container -->
+                <div class="relative inline-block text-left">
+                    <!-- Clickable Area -->
+                    <div id="menuButton" class="flex flex-col ml-1 cursor-pointer hidden md:block">
+                        <div class="text-[12px] text-white">
+                            Hello, Sign in
+                        </div>
+                        <div class="text-sm text-white font-semibold -mt-1 flex items-center">
+                            Account & Lists
+                            <span class="text-[8px] mt-1 ml-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown Menu -->
+                    <div id="dropdownMenu"
+                        class="absolute mt-2 w-96 bg-white text-black rounded-md shadow-lg z-50 hidden p-4 -ml-32">
+                        <div class="grid grid-cols-2 text-sm">
+
+                            <!-- Left Column -->
+                            <ul class="space-y-1 pr-4 border-r border-gray-300">
+                                <li><a href="#" class="block px-2 py-1 hover:bg-slate-100 rounded">Your Account</a></li>
+                                <li><a href="#" class="block px-2 py-1 hover:bg-slate-100 rounded">Orders</a></li>
+                                <li><a href="#" class="block px-2 py-1 hover:bg-slate-100 rounded">Wishlist</a></li>
+                                <li><a href="#" class="block px-2 py-1 hover:bg-slate-100 rounded">Prime Membership</a>
+                                </li>
+                                <li><a href="#" class="block px-2 py-1 hover:bg-slate-100 rounded">Recommendations</a>
+                                </li>
+                            </ul>
+
+                            <!-- Right Column -->
+                            <ul class="space-y-1 pl-4">
+                                <li><a href="#" class="block px-2 py-1 hover:bg-slate-100 rounded">Your Addresses</a>
+                                </li>
+                                <li><a href="#" class="block px-2 py-1 hover:bg-slate-100 rounded">Payment Methods</a>
+                                </li>
+                                <li><a href="#" class="block px-2 py-1 hover:bg-slate-100 rounded">Gift Cards</a></li>
+                                <li><a href="#" class="block px-2 py-1 hover:bg-slate-100 rounded">Login & Security</a>
+                                </li>
+                                <li><a href="#" class="block px-2 py-1 hover:bg-slate-100 rounded">Messages</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+                <span class="text-white block md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                </span>
+                <a href="#" class="hover:border border-white hidden md:block">
+                    <div class="flex flex-col ml-1">
+                        <span class="text-[12px] text-white">
+                            Returns
+                        </span>
+                        <span class="text-sm text-white font-semibold -mt-1">
+                            & Orders
+                        </span>
+                    </div>
+                </a>
+                <a href="#" class="hover:underline">
+                    <div class="flex">
+                        <span class="text-white mr-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                            </svg>
+                        </span>
+                        <span class="font-semibold hidden md:block">
+                            Cart
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Nav Main -->
+    <nav class="bg-slate-900 min-h-[70px] p-2 px-4">
+        <div class="flex pt-14 text-white gap-6">
+            <div id="openSidebar" class="flex cursor-pointer text-sm">
+                <span class="mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </span>
+                All
+            </div>
+            <div class="cursor-pointer text-sm">Today's Deal</div>
+            <div class="cursor-pointer text-sm">Registry</div>
+            <div class="cursor-pointer text-sm hidden md:block">Customer Service</div>
+            <div class="cursor-pointer text-sm hidden md:block">Gift Card</div>
+            <div class="cursor-pointer text-sm hidden md:block">Sell</div>
+        </div>
+    </nav>
+    <!-- Sidebar -->
+    <div id="sidebar"
+        class="fixed top-0 left-0 h-full w-[23vw] bg-white text-black shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+        <div class="p-4 border-b flex justify-between items-center bg-amazon-blue">
+            <div class="flex gap-2">
+                <div class="text-3xl text-white mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                </div>
+                <h2 class="font-bold text-lg text-white">
+                    Hello, sign in
+                </h2>
+            </div>
+            <button id="closeSidebar" class="text-3xl font-bold text-white">&times;</button>
+        </div>
+        <h3 class="font-bold m-2 p-2">Shop by department</h3>
+        <ul class="px-4 pt-2 space-y-3">
+            <li class="hover:bg-slate-200 p-2 cursor-pointer">Electronics</li>
+            <li class="hover:bg-slate-200 p-2 cursor-pointer">Computer</li>
+            <li class="hover:bg-slate-200 p-2 cursor-pointer">Books</li>
+            <li class="hover:bg-slate-200 p-2 cursor-pointer">Toys & Games</li>
+            <li class="hover:bg-slate-200 p-2 cursor-pointer">Beauty & Personal Care</li>
+            <li class="hover:bg-slate-200 p-2 cursor-pointer">Home & Kitchen</li>
+            <li class="hover:bg-slate-200 p-2 cursor-pointer">Sports & Outdoors</li>
+            <li class="hover:bg-slate-200 p-2 cursor-pointer">Grocery</li>
+            <li class="hover:bg-slate-200 p-2 cursor-pointer">Health & Household</li>
+            <li class="hover:bg-slate-200 p-2 cursor-pointer">Pet Supplies</li>
+        </ul>
+    </div>
+
+    <!-- Overlay (optional) -->
+    <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden z-40"></div>
+
+    <!-- Main Content -->
+    <main class="container md:px-16 px-4 p-6 md:flex justify-center gap-8 bg-white mt-6 rounded-lg mb-32">
+
+        <!-- Product Images -->
+        <div class="px-10 pt-10 flex">
+            <div class="flex flex-col gap-2 min-w-[100px]">
+                <img src="img/iphone/1.jpg" alt="Thumb 1"
+                    class="w-20 h-20 object-contain border rounded cursor-pointer" />
+                <img src="img/iphone/2.jpg" alt="Thumb 2"
+                    class="w-20 h-20 object-contain border rounded cursor-pointer" />
+                <img src="img/iphone/3.jpg" alt="Thumb 3"
+                    class="w-20 h-20 object-contain border rounded cursor-pointer" />
+                <img src="img/iphone/4.jpg" alt="Thumb 3"
+                    class="w-20 h-20 object-contain border rounded cursor-pointer" />
+                <img src="img/iphone/5.jpg" alt="Thumb 3"
+                    class="w-20 h-20 object-contain border rounded cursor-pointer" />
+                <img src="img/iphone/6.jpg" alt="Thumb 3"
+                    class="w-20 h-20 object-contain border rounded cursor-pointer" />
+            </div>
+            <img src="img/iphone/1.jpg" alt="Main Product Image" class="w-full rounded-lg mb-4" />
+        </div>
+
+        <!-- Product Info -->
+        <div>
+            <h2 class="text-2xl font-semibold mb-2">Apple iPhone 15 (128 GB) - Blue</h2>
+            <p class="text-green-600 font-semibold mb-2">In Stock</p>
+            <p class="text-slate-600 font-semibold mb-2 text-xs">3K+ bought in past month</p>
+            <hr />
+            <p class="text-2xl text-slate-900 font-bold mb-4">$500.00</p>
+
+            <p class="text-gray-700 mb-4">
+                iPhone 15 features a durable color-infused glass and aluminum design, splash/water/dust resistant,
+                with a 6.1" Super Retina XDR display that’s up to 2x brighter than iPhone 14.
+            </p>
+
+            <div class="pt-4 mb-6 rounded-lg mt-6">
+                <ul class="text-sm text-gray-800 space-y-2">
+                    <li class="flex">
+                        <strong class="min-w-[200px] font-medium">Brand:</strong> Apple
+                    </li>
+                    <li class="flex">
+                        <strong class="min-w-[200px] font-medium">Operating System:</strong> iOS
+                    </li>
+                    <li class="flex">
+                        <strong class="min-w-[200px] font-medium">Memory Storage Capacity:</strong> 128 GB
+                    </li>
+                    <li class="flex">
+                        <strong class="min-w-[200px] font-medium">Screen Size:</strong> 6.1 Inches
+                    </li>
+                    <li class="flex">
+                        <strong class="min-w-[200px] font-medium">Model Name:</strong> iPhone 15
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <hr />
+            <div class="font-semibold text-xl">
+                About this item
+            </div>
+            <ul class="list-disc pl-6 text-sm mb-4">
+                <li>DYNAMIC ISLAND — See calls, rides, flights & more in real-time.</li>
+                <li>INNOVATIVE DESIGN — Color-infused glass and aluminum, Ceramic Shield front.</li>
+                <li>48MP MAIN CAMERA WITH 2X TELEPHOTO — High-res and optical-quality zoom.</li>
+                <li>NEXT-GEN PORTRAITS — Tap to shift focus, even after the shot.</li>
+                <li>POWERHOUSE A16 BIONIC CHIP — Efficient, fast, and smooth all-day performance.</li>
+            </ul>
+            <div class="mt-5">
+                <button class="bg-yellow-400 hover:bg-yellow-300 px-6 py-2 rounded-full text-sm font-semibold shadow">
+                    Add to Cart
+                </button>
+                <button class="bg-amber-500 hover:bg-amber-400 px-6 py-2 rounded-full text-sm font-semibold shadow">
+                    Buy Now
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-amazon-blue text-white py-10 md:px-64 px-10">
+        <div class="container mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10">
+            <!-- Column 1 -->
+            <div>
+                <h3 class="font-semibold mb-4">Get to Know Us</h3>
+                <ul>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">About Us</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Careers</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Press Releases</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Amazon Cares</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Gift a Smile</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div>
+                <h3 class="font-semibold mb-4">Connect with Us</h3>
+                <ul>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Facebook</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Twitter</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Instagram</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">YouTube</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div>
+                <h3 class="font-semibold mb-4">Make Money with Us</h3>
+                <ul>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Sell on Amazon</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Amazon Global Selling</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Become an Affiliate</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Advertise Your Products</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Self-Publish with Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div>
+                <h3 class="font-semibold mb-4">Let Us Help You</h3>
+                <ul>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">COVID-19 and Amazon</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Your Account</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Your Orders</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Shipping Rates & Policies</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Return & Replacements</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 5 -->
+            <div>
+                <h3 class="font-semibold mb-4">Payment Products</h3>
+                <ul>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Amazon Business</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Shop with Points</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Reload Your Balance</a></li>
+                    <li><a href="#" class="text-gray-300 hover:underline text-sm">Amazon Currency Converter</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center text-sm mt-10 text-gray-400">
+            <p>&copy; 2025 CodingMSTR.com, Inc. or its affiliates</p>
+            <div class="mt-4">
+                <a href="#" class="text-gray-300 hover:underline text-sm mx-2">Privacy Notice</a>
+                <a href="#" class="text-gray-300 hover:underline text-sm mx-2">Conditions of Use</a>
+                <a href="#" class="text-gray-300 hover:underline text-sm mx-2">Help</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('openSidebar');
+        const closeBtn = document.getElementById('closeSidebar');
+        const overlay = document.getElementById('overlay');
+
+        openBtn.addEventListener('click', () => {
+            sidebar.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+        });
+
+        overlay.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+        });
+    </script>
+
+    <!-- Script to toggle dropdown -->
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const dropdownMenu = document.getElementById("dropdownMenu");
+
+        menuButton.addEventListener("click", () => {
+            dropdownMenu.classList.toggle("hidden");
+        });
+
+        // Optional: Close dropdown if clicked outside
+        window.addEventListener("click", function (e) {
+            if (!menuButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.add("hidden");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
