@@ -19,9 +19,9 @@
   <nav class="bg-amazon-blue p-2 px-4 fixed min-w-[99vw]">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <a href="/home.html" class="text-white text-2xl font-bold">Amazon</a>
+      <a href="/index.html" class="text-white text-2xl font-bold">Amazon</a>
       <div class="flex ml-2 hover:border border-white cursor-pointer p-1">
-        <div class="text-white mt-2">
+        <div class="text-white mt-2  hidden md:block">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -153,7 +153,7 @@
   </nav>
   <!-- Sidebar -->
   <div id="sidebar"
-    class="fixed top-0 left-0 h-full w-[23vw] bg-white text-black shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+    class="fixed top-0 left-0 h-full md:w-[23vw] w-[70vw] bg-white text-black shadow-lg transform -translate-x-full transition-transform duration-300 z-50 hidden">
     <div class="p-4 border-b flex justify-between items-center bg-amazon-blue">
       <div class="flex gap-2">
         <div class="text-3xl text-white mt-1">
@@ -620,18 +620,21 @@
     const overlay = document.getElementById('overlay');
 
     openBtn.addEventListener('click', () => {
-      sidebar.classList.remove('-translate-x-full');
+      sidebar.classList.remove('-translate-x-full', 'hidden');
       overlay.classList.remove('hidden');
     });
 
     closeBtn.addEventListener('click', () => {
       sidebar.classList.add('-translate-x-full');
       overlay.classList.add('hidden');
+      // Delay hiding the sidebar element so animation can finish
+      setTimeout(() => sidebar.classList.add('hidden'), 300);
     });
 
     overlay.addEventListener('click', () => {
       sidebar.classList.add('-translate-x-full');
       overlay.classList.add('hidden');
+      setTimeout(() => sidebar.classList.add('hidden'), 300);
     });
   </script>
 
